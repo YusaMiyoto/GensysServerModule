@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>All students</title>
+</head>
+<body>
+<!--из таймлифа "врем переменная : ${коллекция}"-->
+<div th:each="student : ${students}">
+    <a th:href="@{/students/{id}(id=${student.getId()})}" th:text="${student.getLastName() +' '+student.getName() + ' ' +student.getPatronymic()}">user</a>
+    <!--ссылка+имя вставится автоматически-->
+</div>
+<br/>
+<hr/>
+<a href="/students/new">Create new student</a>
+</body>
+</html>

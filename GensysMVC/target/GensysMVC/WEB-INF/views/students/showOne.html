@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<p th:text="${student.getId()}">ID</p> <!--(use ключ из модели)Знач перем встав вместо того, что в тэге-->
+<p th:text="${student.getName()}">VALUE</p>
+<p th:text="${student.getLastName()}">VALUE</p>
+<p th:text="${student.getPatronymic()}">VALUE</p>
+<p th:text="${student.getCourse()}">VALUE</p>
+<p th:text="${student.getGroup()}">VALUE</p>
+
+<a th:href="@{/students/{id}/edit(id=${student.getId()})}">Edit</a>
+<form th:method="DELETE" th:action="@{/students/{id}(id=${student.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+</body>
+</html>

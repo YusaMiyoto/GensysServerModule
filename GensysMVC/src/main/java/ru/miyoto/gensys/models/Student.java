@@ -47,6 +47,19 @@ public class Student {
         this.metadata = metadata;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", course=" + course +
+                ", group='" + group + '\'' +
+                ", metadata='" + metadata + '\'' +
+                '}';
+    }
+
     public Student() {
     }
 

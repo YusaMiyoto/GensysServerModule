@@ -69,4 +69,8 @@ public class StudentsController {
         studentDAO.delete(id);
         return "redirect:/students";
     }
+
+    public StudentDAO getStudentDAO() {
+        return studentDAO;
+    }
 }
